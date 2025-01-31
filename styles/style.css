@@ -1,3 +1,133 @@
 *{
     margin: 0 auto;
 }
+.popular-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.popular-content h1 {
+    color: green;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.big-card {
+    background-color: #2A8F4C;
+    padding: 10px;
+    border-radius: 8px;
+    width: 35%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-right: 20px; /* Reduce space between cards */
+}
+
+.big-card-text {
+    color: white;
+    margin-bottom: 10px; /* Reduce space between text */
+}
+
+.big-card h3 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.big-card p {
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+.big-card img {
+    width: 160px; /* Increase the image size */
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 60%;
+}
+
+.card {
+    background-color: white;
+    color: black;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px solid black;
+    position: relative;
+}
+
+.card img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+.card p:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card p:first-child::before {
+    content: "★";
+    color: yellow;
+    margin-right: 5px;
+}
+
+.big-card button {
+    gap: 50px;
+    color: black;
+    background-color: aliceblue;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.big-card button:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .popular-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr); /* Keeps 3 columns for small cards */
+        width: 100%; /* Full width for small cards */
+    }
+
+    .big-card {
+        width: 100%; /* Full width on medium devices */
+        margin-right: 0; /* Removes margin between cards */
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .big-card {
+        width: 100%;
+    }
+}
