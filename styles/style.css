@@ -2,6 +2,7 @@
     margin: 0 auto;
 }
 .popular-content {
+    margin-top: 40px;
     display: flex;
     justify-content: space-between;
     gap: 20px;
